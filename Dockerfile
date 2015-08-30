@@ -79,3 +79,12 @@ RUN git clone git://itk.org/SimpleITK.git && \
   /usr/bin/python3 ./PythonPackage/setup.py install && \
   cd ../../.. && \
   rm -rf SimpleITK SimpleITK-build
+
+USER root
+RUN pip3 install ipywidgets
+RUN jupyter notebook --generate-config
+RUN git clone https://github.com/damianavila/RISE.git && \
+  cd RISE && \
+  JUPYTER_CONFIG_DIR=/root/.jupyter python3 setup.py install && \
+  cd .. && \
+  rm -rf RISE
