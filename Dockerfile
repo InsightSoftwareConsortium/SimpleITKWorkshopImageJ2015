@@ -88,3 +88,5 @@ RUN git clone https://github.com/damianavila/RISE.git && \
   JUPYTER_CONFIG_DIR=/root/.jupyter python3 setup.py install && \
   cd .. && \
   rm -rf RISE
+
+ADD . ./
