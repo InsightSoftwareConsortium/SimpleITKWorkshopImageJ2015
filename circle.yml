@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker pull insighttoolkit/simpleitk-imagej-2015:latest
+
+test:
+  override:
+    - docker run -v ~/SimpleITKWorkshopImageJ2015:/usr/src insighttoolkit/simpleitk-imagej-2015 /usr/src/test.sh
