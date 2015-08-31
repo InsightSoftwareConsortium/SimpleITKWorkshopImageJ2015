@@ -1,1 +1,0 @@
-# SimpleITKWorkshopImageJ2015
