@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
   libpng12-dev \
   libpython3-dev \
   libtiff5-dev \
+  openjdk-7-jdk \
+  openjdk-7-jre \
   python3 \
   python3-pip \
   ninja-build \
@@ -41,6 +43,7 @@ RUN git clone git://itk.org/ITK.git && \
     -DITK_BUILD_DEFAULT_MODULES:BOOL=ON \
     -DITK_USE_SYSTEM_LIBRARIES:BOOL=ON \
     -DModule_ITKReview:BOOL=ON \
+    -DModule_SCIFIO:BOOL=ON \
     ../ITK && \
   ninja install && \
   cd .. && \
