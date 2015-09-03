@@ -21,8 +21,8 @@ docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN \
 		jupyter/tmpnb \
 			 python orchestrate.py \
 				--container_port=8889 \
-				--cpu_shares=4 \
+				--cpu_shares=2 \
 				--max_dock_workers=40 \
-				--mem_limit=4096m \
+				--mem_limit=2048m \
 				--image=$IMAGE_NAME \
 				--command="sh -c 'jupyter notebook --no-browser --NotebookApp.base_url={base_path} --ip=0.0.0.0 --port {port}'"
