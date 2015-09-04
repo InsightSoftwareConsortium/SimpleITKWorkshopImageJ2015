@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 apt-get update
 
-apt-get install -y git
+apt-get install -y git curl
 mkdir -p /srv
 cd /srv/
 git clone https://github.com/thewtex/tmpnb-redirector.git
